@@ -10,14 +10,14 @@ Rather than treating each topic as a separate lab, I am building them as one con
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{
-  'background':'#008000',
-  'primaryColor':'#cfefff',
-  'primaryTextColor':'#ffffff',
-  'primaryBorderColor':'#9ed8f5',
-  'lineColor':'#7aa7c7',
-  'secondaryColor':'#cfefff',
-  'tertiaryColor':'#cfefff',
-  'fontFamily':'Arial'
+ 'background':'#f8fafc',
+'primaryColor':'#0f172a',
+'primaryTextColor':'#f8fafc',
+'primaryBorderColor':'#38bdf8',
+'lineColor':'#64748b',
+'secondaryColor':'#111827',
+'tertiaryColor':'#1e293b'
+  'fontFamily':'Times New Roman'
 }}}%%
 flowchart TD
     USERS["Users & Business Devices<br/>Staff, Doctors, Admin,<br/>PCs, Phones, Printers"]
