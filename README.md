@@ -10,7 +10,7 @@ Rather than treating each topic as a separate lab, I am building them as one con
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{
-  'background':'#ffffff',
+  'background':'#008000',
   'primaryColor':'#cfefff',
   'primaryTextColor':'#ffffff',
   'primaryBorderColor':'#9ed8f5',
