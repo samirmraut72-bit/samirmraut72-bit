@@ -11,28 +11,28 @@ Rather than treating each topic as a separate lab, I am building them as one con
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{
   'background':'#ffffff',
-  'primaryColor':'#000000',
+  'primaryColor':'#cfefff',
   'primaryTextColor':'#ffffff',
-  'primaryBorderColor':'#000000',
-  'lineColor':'#000000',
-  'secondaryColor':'#000000',
-  'tertiaryColor':'#000000',
+  'primaryBorderColor':'#9ed8f5',
+  'lineColor':'#7aa7c7',
+  'secondaryColor':'#cfefff',
+  'tertiaryColor':'#cfefff',
   'fontFamily':'Arial'
 }}}%%
-flowchart LR
+flowchart TD
+    USERS["Users & Business Devices<br/>Staff, Doctors, Admin,<br/>PCs, Phones, Printers"]
+    NETWORK["Network Infrastructure<br/>VLANs, Switching, Routing,<br/>OSPF, HSRP, DHCP, ACLs"]
+    SYSTEMS["Windows Infrastructure<br/>Windows Server, AD DS,<br/>DNS, Group Policy"]
+    IDENTITY["Identity & Device Management<br/>Entra ID, MFA,<br/>App Roles, Intune"]
+    APP["Business Application<br/>MedSecure Clinical Platform"]
+    SECURITY["Security & Troubleshooting<br/>RBAC, Port Security,<br/>Logging, Testing"]
 
-    U["Users & Devices<br/>Staff · Doctors · Admin<br/>PCs · Phones · Printers"]
-    N["Network Infrastructure<br/>VLANs · Switching · Routing<br/>OSPF · HSRP · DHCP · ACLs"]
-    W["Windows Infrastructure<br/>Windows Server · AD DS<br/>DNS · Group Policy"]
-    I["Identity & Management<br/>Entra ID · MFA<br/>App Roles · Intune"]
-    A["MedSecure Application<br/>Clinical Platform"]
+    USERS --> NETWORK
+    NETWORK --> SYSTEMS
+    SYSTEMS --> IDENTITY
+    IDENTITY --> APP
 
-     U --> N
-    N --> W
-    W --> I
-    I --> A
-
-    S --- N
-    S --- W
-    S --- I
-    S --- A
+    SECURITY --- NETWORK
+    SECURITY --- SYSTEMS
+    SECURITY --- IDENTITY
+    SECURITY --- APP
