@@ -1,22 +1,28 @@
-# Hi
+Connected Business IT Environment
 
-I am building practical IT infrastructure labs to understand how the main parts of an organisation's technology environment work together.
+I am building practical IT infrastructure labs to understand how the main technology components of a real business work together.
 
-Instead of learning networking, servers, identity, cloud and applications as separate topics, I am building them as connected environments so I can understand how users, devices, networks and business services interact in practice.
+The goal of these projects is to cover the major areas an organisation depends on every day: networking, users and devices, servers, Active Directory, DNS, Group Policy, cloud identity, endpoint management, security, business applications and troubleshooting.
 
-My goal is not just to complete individual labs, but to understand the full IT infrastructure of an organisation from the network layer through systems, identity, endpoint management and applications.
+Rather than treating each topic as a separate lab, I am building them as one connected environment so I can understand the full flow of IT inside an organisation.
 
-## Current Practical Projects
+## How the projects connect
 
-### Network Administrator
-Enterprise Cisco multi-site network with VLANs, OSPF, HSRP, DHCP, ACLs, Layer-2 security and branch connectivity.
+```mermaid
+flowchart TD
+    USERS["Users & Business Devices<br/>Staff, Doctors, Admin, PCs, Phones, Printers"]
+    NETWORK["Network Infrastructure<br/>VLANs, Switching, Routing, OSPF, HSRP, DHCP, ACLs"]
+    SYSTEMS["Windows Infrastructure<br/>Windows Server, AD DS, DNS, Group Policy"]
+    IDENTITY["Identity & Device Management<br/>Entra ID, MFA, App Roles, Intune"]
+    APP["Business Application<br/>MedSecure Clinical Platform"]
+    SECURITY["Security & Troubleshooting<br/>RBAC, Port Security, Logging, Testing"]
 
-### Windows Server / Active Directory / Entra / Intune
-Windows Server, AD DS, DNS, Group Policy, hybrid identity, Microsoft Entra ID and Intune endpoint management.
+    USERS --> NETWORK
+    NETWORK --> SYSTEMS
+    SYSTEMS --> IDENTITY
+    IDENTITY --> APP
 
-### MedSecure
-Healthcare application project connecting identity, access control, networking and application services into one environment.
-
-## What I am working toward
-
-I am still learning and improving these environments. The purpose of this portfolio is to show my practical progress, troubleshooting process and understanding of how different parts of IT infrastructure connect together.
+    SECURITY --- NETWORK
+    SECURITY --- SYSTEMS
+    SECURITY --- IDENTITY
+    SECURITY --- APP
