@@ -7,8 +7,16 @@ The goal of these projects is to cover the major areas an organisation depends o
 Rather than treating each topic as a separate lab, I am building them as one connected environment so I can understand the full flow of IT inside an organisation.
 
 ## How the projects connect
-
 ```mermaid
+%%{init: {
+  "flowchart": {
+    "nodeSpacing": 18,
+    "rankSpacing": 18,
+    "diagramPadding": 0,
+    "curve": "linear"
+  }
+}}%%
+
 flowchart TD
 
     USERS["Users & Business Devices<br/>Staff, Doctors, Admin<br/>PCs, Phones, Printers"]
@@ -33,7 +41,7 @@ flowchart TD
     SECURITY --- IDENTITY
     SECURITY --- APP
 
-    classDef infra fill:#1e293b,stroke:#7dd3fc,stroke-width:1px,color:#ffffff,font-size:12px;
+    classDef infra fill:#1e293b,stroke:#7dd3fc,stroke-width:1px,color:#ffffff,font-size:10px;
     class USERS,NETWORK,SYSTEMS,IDENTITY,APP,SECURITY infra;
 
     linkStyle default stroke:#64748b,stroke-width:1px;
