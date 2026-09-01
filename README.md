@@ -9,23 +9,19 @@ Rather than treating each topic as a separate lab, I am building them as one con
 ## How the projects connect
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{
- 'background':'#f8fafc',
-'primaryColor':'#0f172a',
-'primaryTextColor':'#f8fafc',
-'primaryBorderColor':'#38bdf8',
-'lineColor':'#64748b',
-'secondaryColor':'#111827',
-'tertiaryColor':'#1e293b'
-  'fontFamily':'Times New Roman'
-}}}%%
 flowchart TD
-    USERS["Users & Business Devices<br/>Staff, Doctors, Admin,<br/>PCs, Phones, Printers"]
-    NETWORK["Network Infrastructure<br/>VLANs, Switching, Routing,<br/>OSPF, HSRP, DHCP, ACLs"]
-    SYSTEMS["Windows Infrastructure<br/>Windows Server, AD DS,<br/>DNS, Group Policy"]
-    IDENTITY["Identity & Device Management<br/>Entra ID, MFA,<br/>App Roles, Intune"]
+
+    USERS["Users & Business Devices<br/>Staff, Doctors, Admin<br/>PCs, Phones, Printers"]
+
+    NETWORK["Network Infrastructure<br/>VLANs, Switching, Routing<br/>OSPF, HSRP, DHCP, ACLs"]
+
+    SYSTEMS["Windows Infrastructure<br/>Windows Server, AD DS<br/>DNS, Group Policy"]
+
+    IDENTITY["Identity & Device Management<br/>Entra ID, MFA<br/>App Roles, Intune"]
+
     APP["Business Application<br/>MedSecure Clinical Platform"]
-    SECURITY["Security & Troubleshooting<br/>RBAC, Port Security,<br/>Logging, Testing"]
+
+    SECURITY["Security & Troubleshooting<br/>RBAC, Port Security<br/>Logging, Testing"]
 
     USERS --> NETWORK
     NETWORK --> SYSTEMS
@@ -36,3 +32,8 @@ flowchart TD
     SECURITY --- SYSTEMS
     SECURITY --- IDENTITY
     SECURITY --- APP
+
+    classDef infra fill:#1e293b,stroke:#7dd3fc,stroke-width:1px,color:#ffffff,font-size:12px;
+    class USERS,NETWORK,SYSTEMS,IDENTITY,APP,SECURITY infra;
+
+    linkStyle default stroke:#64748b,stroke-width:1px;
