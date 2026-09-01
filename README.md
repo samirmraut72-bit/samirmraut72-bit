@@ -13,32 +13,18 @@ Rather than treating each topic as a separate lab, I am building them as one con
   'background':'#ffffff',
   'primaryColor':'#000000',
   'primaryTextColor':'#ffffff',
-  'primaryBorderColor':'#ffffff',
-  'lineColor':'#ffffff',
+  'primaryBorderColor':'#000000',
+  'lineColor':'#000000',
   'secondaryColor':'#000000',
   'tertiaryColor':'#000000',
   'fontFamily':'Arial'
 }}}%%
-flowchart TD
+flowchart LR
 
-    U["Users & Business Devices<br/>Staff, Doctors, Admin<br/>PCs, Phones, Printers"]
+    U["Users & Devices<br/>Staff · Doctors · Admin<br/>PCs · Phones · Printers"]
+    N["Network Infrastructure<br/>VLANs · Switching · Routing<br/>OSPF · HSRP · DHCP · ACLs"]
+    W["Windows Infrastructure<br/>Windows Server · AD DS<br/>DNS · Group Policy"]
+    I["Identity & Management<br/>Entra ID · MFA<br/>App Roles · Intune"]
+    A["MedSecure Application<br/>Clinical Platform"]
 
-    N["Network Infrastructure<br/>VLANs, Switching, Routing<br/>OSPF, HSRP, DHCP, ACLs"]
-
-    W["Windows Infrastructure<br/>Windows Server, AD DS<br/>DNS, Group Policy"]
-
-    I["Identity & Device Management<br/>Entra ID, MFA<br/>App Roles, Intune"]
-
-    A["Business Application<br/>MedSecure Clinical Platform"]
-
-    S["Security & Troubleshooting<br/>RBAC, Port Security<br/>Logging, Testing"]
-
-    U --> N
-    N --> W
-    W --> I
-    I --> A
-
-    S --- N
-    S --- W
-    S --- I
-    S --- A
+    U --> N --> W --> I --> A
