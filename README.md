@@ -27,4 +27,8 @@ flowchart LR
     I["Identity & Management<br/>Entra ID · MFA<br/>App Roles · Intune"]
     A["MedSecure Application<br/>Clinical Platform"]
 
-  
+   U --> N --> W --> I --> A
+    S --- N
+    S --- W
+    S --- I
+    S --- A
