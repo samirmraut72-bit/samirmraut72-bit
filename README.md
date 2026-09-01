@@ -11,22 +11,27 @@ Rather than treating each topic as a separate lab, I am building them as one con
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{
   'background':'#ffffff',
-  'primaryColor':'#050505',
-  'primaryTextColor':'#8dff8d',
-  'primaryBorderColor':'#39ff14',
-  'lineColor':'#39ff14',
-  'secondaryColor':'#0d0d0d',
-  'tertiaryColor':'#111111',
+  'primaryColor':'#000000',
+  'primaryTextColor':'#ffffff',
+  'primaryBorderColor':'#ffffff',
+  'lineColor':'#ffffff',
+  'secondaryColor':'#000000',
+  'tertiaryColor':'#000000',
   'fontFamily':'Arial'
 }}}%%
-flowchart LR
+flowchart TD
 
-    U["Users & Devices<br/>Staff · Doctors · Admin<br/>PCs · Phones · Printers"]
-    N["Network Infrastructure<br/>VLANs · Switching · Routing<br/>OSPF · HSRP · DHCP · ACLs"]
-    W["Windows Infrastructure<br/>Windows Server · AD DS<br/>DNS · Group Policy"]
-    I["Identity & Management<br/>Entra ID · MFA<br/>App Roles · Intune"]
+    U["Users & Business Devices<br/>Staff, Doctors, Admin<br/>PCs, Phones, Printers"]
+
+    N["Network Infrastructure<br/>VLANs, Switching, Routing<br/>OSPF, HSRP, DHCP, ACLs"]
+
+    W["Windows Infrastructure<br/>Windows Server, AD DS<br/>DNS, Group Policy"]
+
+    I["Identity & Device Management<br/>Entra ID, MFA<br/>App Roles, Intune"]
+
     A["Business Application<br/>MedSecure Clinical Platform"]
-    S["Security & Troubleshooting<br/>RBAC · Port Security<br/>Logging · Testing"]
+
+    S["Security & Troubleshooting<br/>RBAC, Port Security<br/>Logging, Testing"]
 
     U --> N
     N --> W
