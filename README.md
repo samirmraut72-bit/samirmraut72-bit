@@ -7,41 +7,5 @@ The goal of these projects is to cover the major areas an organisation depends o
 Rather than treating each topic as a separate lab, I am building them as one connected environment so I can understand the full flow of IT inside an organisation.
 
 ## How the projects connect
-```mermaid
-%%{init: {
-  "flowchart": {
-    "nodeSpacing": 18,
-    "rankSpacing": 18,
-    "diagramPadding": 0,
-    "curve": "linear"
-  }
-}}%%
 
-flowchart TD
-
-    USERS["Users & Business Devices<br/>Staff, Doctors, Admin<br/>PCs, Phones, Printers"]
-
-    NETWORK["Network Infrastructure<br/>VLANs, Switching, Routing<br/>OSPF, HSRP, DHCP, ACLs"]
-
-    SYSTEMS["Windows Infrastructure<br/>Windows Server, AD DS<br/>DNS, Group Policy"]
-
-    IDENTITY["Identity & Device Management<br/>Entra ID, MFA<br/>App Roles, Intune"]
-
-    APP["Business Application<br/>MedSecure Clinical Platform"]
-
-    SECURITY["Security & Troubleshooting<br/>RBAC, Port Security<br/>Logging, Testing"]
-
-    USERS --> NETWORK
-    NETWORK --> SYSTEMS
-    SYSTEMS --> IDENTITY
-    IDENTITY --> APP
-
-    SECURITY --- NETWORK
-    SECURITY --- SYSTEMS
-    SECURITY --- IDENTITY
-    SECURITY --- APP
-
-    classDef infra fill:#1e293b,stroke:#7dd3fc,stroke-width:1px,color:#ffffff,font-size:10px;
-    class USERS,NETWORK,SYSTEMS,IDENTITY,APP,SECURITY infra;
-
-    linkStyle default stroke:#64748b,stroke-width:1px;
+![What My Lab Represents](IMG_5509.jpeg)
